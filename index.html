@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Site Metas -->
+    <meta name="keywords" content="CodeQuest" />
+    <meta name="description" content="Quiz" />
+    <meta name="author" content="Vaish" />
+    <!-- Page Title -->
+    <title>CodeQuest-Quiz App</title>
+    <!-- Style sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Linked fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rock+Salt&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="quiz-app">
+      <!-- Header -->
+      <header class="header">
+        <h1>CodeQuest</h1>
+        <img src="./images/header.png" alt="" />
+      </header>
+      <h3>Choose a language for your quiz!</h3>
+
+      <!-- Language Section -->
+      <section class="lang-section">
+        <button class="lang-btn" onclick="startQuiz('HTML')" id="html">
+          <img src="./images/html.png" alt="HTML" />
+        </button>
+        <button class="lang-btn" onclick="startQuiz('CSS')" id="css">
+          <img src="./images/css.png" alt="CSS" />
+        </button>
+        <button
+          class="lang-btn"
+          onclick="startQuiz('JavaScript')"
+          id="javascript"
+        >
+          <img src="./images/js.png" alt="JavaScript" />
+        </button>
+        <button class="lang-btn" onclick="startQuiz('React')" id="react">
+          <img src="./images/react.png" alt="react" />
+        </button>
+      </section>
+
+      <!-- Quiz Section -->
+      <section class="quiz-section">
+        <div id="quiz-container" class="quiz-container" style="display: none">
+          <h1 id="quiz-title">Quiz</h1>
+          <p id="question"></p>
+          <div id="answer-buttons" class="btn-container"></div>
+          <button id="next-btn" style="display: none" onclick="nextQuestion()">
+            Next
+          </button>
+          <div id="result-container">
+            <p id="result-text"></p>
+            <img id="result-gif" src="" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer section -->
+      <footer class="footer-section">
+        <div class="container">
+          <p>&copy; 2025 All Rights Reserved By CodeQuest</p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Link JavaScript file -->
+    <script src="script.js"></script>
+  </body>
+</html>
